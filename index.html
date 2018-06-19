@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>ENTER THE DETAILS</h2>
+  <form method="POST" action="/show/">
+      {% csrf_token %}
+    <div class="form-group">
+        <div class="form-group">
+      <label>ENTER THE NO. OF PERSONS</label>
+      <input type="number" class="form-control" required id="id_pers" placeholder="Enter the amount" name="pers">
+    </div>
+      <label>OUTING EXPENSES</label>
+      <input type="number" class="form-control" required id="id_out" placeholder="Enter the amount" name="outi">
+    </div>
+    <div class="form-group">
+      <label>DINNER EXPENSES</label>
+      <input type="number" class="form-control" required id="id_din" placeholder="Enter the amount" name="dinn">
+    </div>
+      <div class="form-group">
+      <label>TRIP EXPENSES</label>
+      <input type="number" class="form-control" required id="id_trip" placeholder="Enter the amount" name="trip">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
